@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { OutlineComponent } from './outline/outline.component';
+import { VideoComponent } from './video/video.component';
 
 const routes: Routes = [
   {
     path: '',
-    children: []
+    component: OutlineComponent
+  },
+  {
+    path: 'video/:id',
+    component: VideoComponent
   }
 ];
 
