@@ -1,9 +1,11 @@
-export class TrainingCourseProductionPage {
+import { browser, by, element } from 'protractor';
+
+export class TcpPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('training-course-production-app h1')).getText();
+    return element(by.css('tcp-root h1')).getText();
   }
 }

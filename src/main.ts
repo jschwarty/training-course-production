@@ -1,13 +1,11 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { TrainingCourseProductionAppComponent, environment } from './app/';
-import { FIREBASE_PROVIDERS, defaultFirebase } from 'angularfire2';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(TrainingCourseProductionAppComponent, [
-  FIREBASE_PROVIDERS
-]);
-
+platformBrowserDynamic().bootstrapModule(AppModule);
