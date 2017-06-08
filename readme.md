@@ -5,7 +5,6 @@ be able to create courses, add table of contents and video scripts, and use for 
 
 ## Powered By
 
-- Angular 2
+- Angular
 - Angular CLI
-- Angular 2 Material
-- Firebase
+- Angular Material
