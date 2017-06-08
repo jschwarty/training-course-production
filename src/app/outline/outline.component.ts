@@ -50,4 +50,11 @@ export class OutlineComponent implements OnInit {
       });
     }
   }
+
+  deleteVideo(chapter, video) {
+    this.store.dispatch({
+      type: 'DELETE_VIDEO',
+      payload: {chapter, video}
+    });
+  }
 }

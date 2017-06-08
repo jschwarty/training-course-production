@@ -42,6 +42,17 @@ export const chaptersReducer = (state = [], action) => {
             };
         })
       ];
+    case 'DELETE_VIDEO':
+      return [
+        ...state.map(chapter => {
+          return chapter !== action.payload.chapter
+            ? chapter
+            : {
+              ...chapter,
+              videos: chapter.videos.filter(video => video !== action.payload.video)
+            };
+        })
+      ];
     default:
       return state;
   }

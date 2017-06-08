@@ -5,6 +5,7 @@
     <ol>
       <li *ngFor="let video of chapter.videos">
         <h3 contenteditable="true" (blur)="updateVideoName(chapter, video, $event.target.innerText)">{{video.name}}</h3>
+        <button (click)="deleteVideo(chapter, video)">Delete</button>
       </li>
     </ol>
   </li>
